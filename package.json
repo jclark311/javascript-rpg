@@ -1,0 +1,23 @@
+{
+  "name": "javascript-rpg",
+  "version": "1.0.0",
+  "description": "A simple node RPG game example",
+  "main": "game.js",
+  "bin": {
+    "simprpg": "./game.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jclark311/javascript-rpg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jclark311/javascript-rpg/issues"
+  },
+  "homepage": "https://github.com/jclark311/javascript-rpg#readme"
+}
