@@ -2,22 +2,49 @@
   "name": "javascript-rpg",
   "version": "1.0.0",
   "description": "A simple node RPG game example",
-  "main": "game.js",
-  "bin": {
-    "simprpg": "./game.js"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d dist",
+    "start": "npm run build && node ./dist/app",
+    "restart": "rimraf dist && npm run start",
+    "lint": "eslint src/",
+    "dev": "nodemon --exec npm run restart",
+    "test": "mocha ./test/**/*.spec.js --recursive"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jclark311/javascript-rpg.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jon C Clark",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jclark311/javascript-rpg/issues"
   },
-  "homepage": "https://github.com/jclark311/javascript-rpg#readme"
+  "homepage": "https://github.com/jclark311/javascript-rpg#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-export-default-from": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "cors": "^2.8.5",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.3",
+    "dotenv": "^14.3.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "helmet": "^5.0.2",
+    "http-errors": "^1.8.1",
+    "morgan": "^1.10.0"
+  }
 }
